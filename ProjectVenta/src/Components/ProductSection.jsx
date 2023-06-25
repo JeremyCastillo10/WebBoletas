@@ -6,7 +6,7 @@ const ProductSection = () => {
   const [locationFilter, setLocationFilter] = useState('');
 
   useEffect(() => {
-    fetch('http://www.boletasapi.somee.com/api/Evento')
+    fetch('https://eventoapiweb.azurewebsites.net/api/Evento')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.log(error));
@@ -25,7 +25,7 @@ const ProductSection = () => {
   return (
     <section className="bg-white py-8">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-4">Boletas destacadas</h2>
+        <h2 className="text-3xl font-bold mb-4">Eventos</h2>
         <div className="flex justify-between mb-4">
           <div>
             <label htmlFor="categoryFilter" className="mr-2">Categoría:</label>
@@ -66,7 +66,7 @@ const ProductSection = () => {
                 <p className="text-gray-600 mb-2">Fecha: {product.fecha}</p>
               </div>
               <button className="bg-blue-900 hover:bg-blue-900 text-white rounded px-4 py-2 ">
-                Agregar al carrito
+                Comprar Boleta
               </button>
             </div>
           ))}
