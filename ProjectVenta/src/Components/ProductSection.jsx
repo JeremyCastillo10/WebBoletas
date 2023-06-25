@@ -6,7 +6,7 @@ const ProductSection = () => {
   const [locationFilter, setLocationFilter] = useState('');
 
   useEffect(() => {
-    fetch('https://eventoapiweb.azurewebsites.net/api/Evento')
+    fetch('https://apieventapp.azurewebsites.net/api/Evento')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.log(error));
